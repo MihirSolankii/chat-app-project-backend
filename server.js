@@ -7,18 +7,16 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    
-    origin: "https://chat-app-project-p7oa.onrender.com/",
-
-    methods: ["GET", "POST"]
+    origin: ['https://chat-app-project-p7oa.onrender.com', 'https://chat-app-project-p7oa.onrender.com/'],  // Accept both versions
+    methods: ['GET', 'POST'],
   }
 });
 
 // Use CORS middleware
 app.use(cors({
-  origin: "https://chat-app-project-p7oa.onrender.com/", // Adjust this as needed as the follows
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"]
+  origin: ['https://chat-app-project-p7oa.onrender.com', 'https://chat-app-project-p7oa.onrender.com/'],  // Accept both versions
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
 }));
 
 // Socket.IO setup
