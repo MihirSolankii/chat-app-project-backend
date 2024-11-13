@@ -7,14 +7,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ['https://chat-app-project-p7oa.onrender.com', 'https://chat-app-project-p7oa.onrender.com/'],  // Accept both versions
+    origin: ['https://chat-app-project-p7oa.onrender.com', 'https://chat-app-project-p7oa.onrender.com/','https://chatapp-ecru-beta.vercel.app/','https://chatapp-ecru-beta.vercel.app'],  // Accept both versions
     methods: ['GET', 'POST'],
   }
 });
 
 // Use CORS middleware
 app.use(cors({
-  origin: ['https://chat-app-project-p7oa.onrender.com', 'https://chat-app-project-p7oa.onrender.com/'],  // Accept both versions
+  origin: ['https://chat-app-project-p7oa.onrender.com', 'https://chat-app-project-p7oa.onrender.com/','https://chatapp-ecru-beta.vercel.app/','https://chatapp-ecru-beta.vercel.app'],  // Accept both versions
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
