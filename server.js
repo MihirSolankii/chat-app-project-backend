@@ -7,14 +7,16 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:3000",
+    
+    origin: "https://chat-app-project-p7oa.onrender.com/",
+
     methods: ["GET", "POST"]
   }
 });
 
 // Use CORS middleware
 app.use(cors({
-  origin: "http://localhost:3000", // Adjust this as needed
+  origin: "https://chat-app-project-p7oa.onrender.com/", // Adjust this as needed as the follows
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 }));
